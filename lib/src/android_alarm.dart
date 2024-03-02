@@ -14,7 +14,7 @@ class AndroidAlarm {
   }
 
   static Future<dynamic> handleMethodCall(MethodCall call) async {
-    alarmPrint('handleMethodCall "${call.method}"');
+    print('handleMethodCall "${call.method}"');
     try {
       if (call.method == 'alarmRinging') {
         int id = call.arguments['id'];
