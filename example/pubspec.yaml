@@ -19,7 +19,7 @@ dependencies:
     # the parent directory to use the current plugin's version.
     path: ../
   
-  permission_handler: ^11.1.0
+  permission_handler: ^11.0.1
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
