@@ -8,7 +8,7 @@ import 'package:alarm/src/ios_alarm.dart';
 import 'package:alarm/src/android_alarm.dart';
 import 'package:alarm/service/storage.dart';
 import 'package:flutter/foundation.dart';
-import 'package:rxdart/rxdart.dart';
+//import 'package:rxdart/rxdart.dart';
 
 /// Custom print function designed for Alarm plugin.
 DebugPrintCallback alarmPrint = debugPrintThrottled;
@@ -21,8 +21,8 @@ class Alarm {
   static bool get android => defaultTargetPlatform == TargetPlatform.android;
 
   /// Stream of the ringing status.
-  //static final ringStream = StreamController<AlarmSettings>();
-  static final ringStream = BehaviorSubject<AlarmSettings>();
+  static final ringStream = StreamController<AlarmSettings>();
+  //static final ringStream = BehaviorSubject<AlarmSettings>();
 
   /// Initializes Alarm services.
   ///
