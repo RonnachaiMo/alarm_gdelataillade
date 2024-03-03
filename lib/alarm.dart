@@ -41,7 +41,8 @@ class Alarm {
       if (android) AndroidAlarm.init(),
       AlarmStorage.init(),
     ]);
-    await checkAlarm();
+    print("Ignore checkAlarm");
+    //await checkAlarm();
   }
 
   /// Checks if some alarms were set on previous session.
