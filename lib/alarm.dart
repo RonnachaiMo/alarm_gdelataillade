@@ -41,6 +41,21 @@ class Alarm {
       if (android) AndroidAlarm.init(),
       AlarmStorage.init(),
     ]);
+    print("Call checkAlarm");
+    await checkAlarm();
+  }
+
+  static Future<void> init2({bool showDebugLogs = true}) async {
+    alarmPrint = (String? message, {int? wrapWidth}) {
+      if (kDebugMode && showDebugLogs) {
+        print("[Alarm] $message");
+      }
+    };
+
+    await Future.wait([
+      if (android) AndroidAlarm.init(),
+      AlarmStorage.init(),
+    ]);
     print("Ignore checkAlarm");
     //await checkAlarm();
   }
